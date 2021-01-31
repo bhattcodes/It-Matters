@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body{
+    margin: 0 0;
+    width: 360px;
+    height: 640px;
+    background-color: black;
+}
+.container{
+    /* position: relative; */
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
+    width: 100%;
+    width: 360px;
+    height: 640px;
+    background-color: black;
+}
+.heading{
+    /* position: absolute; */
+    display: flex;
+    flex-direction:row;
+    margin-top: 10px;
+}
+
+.logo{
+    color: #96FBA0;
+    height: 50px;
+/* background-color: red; */
+font-weight: 800;
+font-family: 'Ubuntu', sans-serif;
+margin-left: 20px;
+
+
+}
+.windicon{
+
+    background-size: cover;
+    background-image: url(images/wind-sign.png);
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+
+.section1{
+    /* background-color:blue; */
+    position: relative;
+
+}
+.cloud1{
+    margin-top:40px;
+    position: relative;
+}
+.image{
+    background-size: cover;
+    background-image: url(images/cloud.png);
+    height: 23px;
+    width: 96px;
+    position: absolute;
+    right: -35px;
+
+}
+.uppersectiontext{
+    margin-top: 70px;
+    text-align: center;
+}
+.head{
+    font-size:20px;
+    font-weight: 800;
+font-family: 'Ubuntu', sans-serif;
+color: white;
+}
+.content{
+    font-size:16px;
+    font-weight: 500;
+font-family: 'Ubuntu', sans-serif;
+color: white;
+margin-top:25px;
+}
+.section2{
+    /* background-color:red; */
+    position: relative;
+    width: 100%;
+    height: 155px;
+    
+}
+.balloon{
+    background-size: cover;
+    background-image: url(images/balloon.png);
+    height: 130px;
+    width: 79px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.cloud2{
+    background-size: cover;
+    background-image: url(images/cloud.png);
+    height: 23px;
+    width: 99px;
+    top:10px;
+    position: absolute;
+    left: -25px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+#getstartedbtn{
+    height: 49px;
+    width: 197px;
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+.section3{
+    width: 100%;
+    min-height:150px;
+    left: 0;
+    bottom: 0;
+}
+.lowerimage{
+    background-size: cover;
+    background-image: url(images/lowersection.png);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ----------------------explore page-------------------- */
+
+.heading2{
+    display: flex;
+    flex-direction:row;
+    margin-top: 30px;
+}
+
+.backbtn{
+    background-size: cover;
+    background-image: url(images/Vector.png);
+    width: 8px;
+    height: 15px;
+    margin-left: 20px;
+}
+.head2{
+    font-size:14px;
+    font-weight: 600;
+font-family: 'Ubuntu', sans-serif;
+color: white;
+margin-left: 120px;
+}
+.searchbar{
+    margin-top:30px;
+    margin-left: 60px;
+    height: 30px;
+width: 230px;
+left: 0px;
+top: 0px;
+border-radius: 0px;
+background-color: #161616;
+display:flex;
+flex-direction:row;
+border-radius: 15px;
+
+}
+.searchtext{
+    margin: 2px 5px;
+    padding: 5px 5px;
+    width: 80%;
+    background-color: #161616;
+    font-family: 'Ubuntu', sans-serif;
+    border: 0px;
+
+}
+.searchicon{
+    margin-top: 7px;
+    margin-left: 0px;
+    background-size: cover;
+    background-image: url(images/icon.png);
+    width: 15px;
+    height: 15px;
+}
+/* .section3{
+    background-color: blue;
+} */
+.locationimage{
+    background-size: cover;
+    background-image: url(images/location.png);
+    width: 332px;
+    height: 214px;
+    margin-top: 32px;
+}
+.getlocation{
+    display: flex;
+    flex-direction:row;
+}
+.loco{
+    background-size: cover;
+    background-image: url(images/loco.png);
+    width: 15px;
+    height: 19px;
+    margin-left: 5px;
+    margin-top: 10px;
+
+}
+#getlocationbtn{
+    height: 49px;
+    width: 197px;
+    border-radius: 48px;
+    display: flex;
+    margin-top: 121px;
+    margin-left: 81px;
+    flex-direction: row;
+}
+.btntext{
+    margin-top: 14px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* ---------------current location page------------------ */
+
+.currentlocation{
+    margin-left: 100px !important;
+}
+
+#map {
+    margin-top: 25px;
+    height: 360px;
+    /* border-radius:30px; */
+  }
+
+.lastbox{
+    border-radius:30px;
+    /* background-color: pink; */
+}
+.boxes{
+    display: flex;
+    flex-direction: row;
+    /* background-color:red; */
+    width: 80%;
+    height: 38px;
+    margin: 10px 28px;
+    position: relative;
+}
+.cityname{
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    /* background-color:green; */
+    width: 100px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.aqi{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color:blue;
+    width: 60px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+
+/* -------------------show page---------- */
+
+.section5{
+    position: relative;
+    height: 50vh;
+    /* background-color: blue; */
+}
+
+.backimage{
+    position: absolute;
+    left: 45px;
+    top: 70px;
+
+    background-color: rgb(219,92,92,1);
+    height: 232px;
+width: 270px;
+border-radius: 20px;
+
+}
+.refreshbtn{
+    background-size: cover;
+    background-image: url(images/refresh.png);
+    width: 50px;
+    height: 50px;
+    /* margin-left: 5px; */
+    /* margin-top: 10px; */
+    position: absolute;
+    bottom: 5px;
+    left: 152px;
+}
+.aqivalue{
+    font-size: 77px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    position: absolute;
+    top: 124px;
+    left: 113px;
+    z-index: 1;
+}
+.airquality{
+    font-size: 19px;
+    font-weight: 600;
+    font-family: Ubuntu, sans-serif;
+    color: white;
+    position: absolute;
+    top: 93px;
+    left: 135px;
+    z-index: 1;
+}
+.pgm{
+    font-size: 19px;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    position: absolute;
+    top: 218px;
+    left: 156px;
+    z-index: 1;
+}
