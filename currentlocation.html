@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading2">
+            <div class="backbtn"></div>
+            <div class="head2 currentlocation">Current Location</div>
+        </div>
+        <div id="map"></div>
+        <div class="lastbox">
+            <div class="searchbar">
+                <input type="text" class="searchtext" placeholder="Search">
+                <div class="searchicon"></div>
+            </div>
+
+            <div class="boxes">
+                <div class="cityname">delhi</div>
+                <div class="aqi">32pg/m</div>
+            </div>
+            <div class="boxes">
+                <div class="cityname">delhi</div>
+                <div class="aqi">43pg/m</div>
+            </div>
+            <div class="boxes">
+                <div class="cityname">delhi</div>
+                <div class="aqi">21pg/m</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChYInOYG2rPbsLIB_xhBUtDxndyzEbzbE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <script src="cl.js"></script>
+</body>
+
+</html>
