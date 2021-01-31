@@ -11,27 +11,27 @@
 <body>
     <div class="container">
         <div class="heading2">
-            <div class="backbtn"></div>
+            <div class="backbtn" id = "returnexplore"></div>
             <div class="head2 currentlocation">Current Location</div>
         </div>
         <div id="map"></div>
         <div class="lastbox">
             <div class="searchbar">
-                <input type="text" class="searchtext" placeholder="Search">
-                <div class="searchicon"></div>
+                <input type="text" id = "curloctext" class="searchtext" placeholder="Search">
+                <div class="searchicon" id = "curlocsearch"></div>
             </div>
 
             <div class="boxes">
-                <div class="cityname">delhi</div>
-                <div class="aqi">32pg/m</div>
+                <div class="cityname" id = "city1"></div>
+                <div class="aqi" id = "aqi1"></div>
             </div>
             <div class="boxes">
-                <div class="cityname">delhi</div>
-                <div class="aqi">43pg/m</div>
+                <div class="cityname" id = "city2"></div>
+                <div class="aqi" id = "aqi2"></div>
             </div>
             <div class="boxes">
-                <div class="cityname">delhi</div>
-                <div class="aqi">21pg/m</div>
+                <div class="cityname" id ="city3"></div>
+                <div class="aqi" id = "aqi3"></div>
             </div>
 
         </div>
@@ -41,7 +41,8 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChYInOYG2rPbsLIB_xhBUtDxndyzEbzbE&callback=initMap&libraries=&v=weekly"
         defer></script>
-    <script src="cl.js"></script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

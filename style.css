@@ -174,6 +174,7 @@ border-radius: 15px;
     background-color: #161616;
     font-family: 'Ubuntu', sans-serif;
     border: 0px;
+    color: white;
 
 }
 .searchicon{
@@ -256,6 +257,7 @@ border-radius: 15px;
     /* background-color:green; */
     width: 100px;
     height: 28px;
+    overflow: show;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 800;
@@ -266,6 +268,7 @@ border-radius: 15px;
     position: absolute;
     top: 5px;
     right: 5px;
+    display: none;
     background-color:blue;
     width: 60px;
     height: 28px;
@@ -278,6 +281,9 @@ border-radius: 15px;
     padding-top: 10px;
 }
 
+.aqi:hover{
+    cursor: pointer;
+}
 
 /* -------------------show page---------- */
 
