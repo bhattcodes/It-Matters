@@ -7,26 +7,46 @@ const request = require("request");
 var app = express();
 app.use(cookieParser());
 app.use(session({secret: "It matters - AQI WebApp", cookie: {maxAge: 3600000}}));
+app.use('/images',express.static('public'));
+app.use('/images/icons',express.static('public'));
 
-app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-
-// Note: Filenames and routes will likey need changing.
 app.get(['/','index.html'],function(req,res){
     res.sendFile(__dirname + "/index.html");
-    res.status(200).send("Online");
 });
 
-app.get('styles.css',function(req,res){
-    res.sendFile(__dirname + "/styles.css");
+app.get(['/explore','explore.html'],function(req,res){
+    res.sendFile(__dirname + "/explore.html");
+});
+app.get(['/currentlocation','currentlocation.html'],function(req,res){
+    res.sendFile(__dirname + "/currentlocation.html");
 });
 
-app.get('script.js',function(req,res){
-    res.sendFile(__dirname + "/script.js" );
+app.get(['/show','show.html'],function(req,res){
+    res.sendFile(__dirname + "/show.html");
 });
+
+app.get('/style.css',function(req,res){
+    res.sendFile(__dirname + "/style.css");
+});
+
+app.get('/cl.js',function(req,res){
+    res.sendFile(__dirname + "/cl.js" );
+});
+app.get('/app.js',function(req,res){
+    res.sendFile(__dirname + "/app.js" );
+});
+app.get('/sw.js',function(req,res){
+    res.sendFile(__dirname + "/sw.js" );
+});
+
+app.get('/manifest.json',function(req,res){
+    res.sendFile(__dirname + "/manifest.json");
+});
+
 
 app.get('/forecast',function(req,res){
     if(req.hasOwnProperty('query') == false){
@@ -58,9 +78,9 @@ app.get('/forecast',function(req,res){
             let lon = parseFloat(req.query.lon);
 
             if("multiple" in req.query){
-                
-                let lat2 = (lat < 89) ? lat + 0.5 : lat - 0.5;
-                let lon2 = (lon < 179) ? lon + 0.5 : lon - 0.5;
+                console.log("sfjdshfsdf");
+                let lat2 = (lat < 89) ? lat + 1 : lat + 1;
+                let lon2 = (lon < 179) ? lon + 1 : lon + 1;
                 let geo = String(lat) + "," + String(lon) + "," + String(lat2) + "," + String(lon2);
             
                 axios.get('https://api.waqi.info/map/bounds/?token=e8a9dea557d6a8dee58dc9040e45718a231b431c&latlng=' + geo
