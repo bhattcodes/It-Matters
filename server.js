@@ -36,10 +36,10 @@ app.get('/forecast',function(req,res){
     //Convert address to lat/long and then search AQI
     if("address" in req.query){
         address = req.query.address;
-        res.send(axios.get('https://nominatim.openstreetmap.org/?addressdetails=1&q=' + address + '&format=json&limit=1'
+        axios.get('https://nominatim.openstreetmap.org/?addressdetails=1&q=' + address + '&format=json&limit=1'
         ).then(result => {
             let geo = result.data[0].lat + ";" + result.data[0].lon;
-            return axios.get('https://api.waqi.info/feed/geo:' + geo + '/?token=e8a9dea557d6a8dee58dc9040e45718a231b431c&latlng='
+                axios.get('https://api.waqi.info/feed/geo:' + geo + '/?token=e8a9dea557d6a8dee58dc9040e45718a231b431c&latlng='
                 ).then(result => {
                     res.status(200).send(result.data);
                     }).catch(error => {
@@ -50,7 +50,7 @@ app.get('/forecast',function(req,res){
         }).catch(error => {
             console.log(error);
             return res.status(404).send("Error");
-          }));
+          });
     }
     //Takes latitude and longitude, and returns conditions for one or more nearby stations
     if(("lat" in req.query)&&("lon" in req.query)){
